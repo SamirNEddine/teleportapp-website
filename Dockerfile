@@ -11,4 +11,4 @@ RUN npm install && \
 
 COPY . .
 
-gatsby develop
+CMD gatsby develop -H 0.0.0.0
