@@ -1,0 +1,24 @@
+#Stage 1: Build web app
+FROM node:alpine as website
+
+RUN npm install -g gatsby-cli
+
+WORKDIR /usr/src/app
+
+COPY . ./
+
+RUN gatsby build
+
+# Stage 2 - Add NGNIX on the top of it
+FROM nginx:alpine
+
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=website /usr/src/app/public /usr/share/nginx/html
+
+EXPOSE 80
+
+WORKDIR /usr/share/nginx/html
+
+RUN apk add --no-cache bash
+
+CMD ["/bin/bash", "-c", "nginx -g \"daemon off;\""]
