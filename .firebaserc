@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "teleport-274815",
+    "test": "teleport-platform",
+    "production": "teleport-274815"
+  }
+}
