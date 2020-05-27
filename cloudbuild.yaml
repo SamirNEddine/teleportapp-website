@@ -3,6 +3,12 @@ steps:
     entrypoint: yarn
     args: ["install"]
   - name: node:10.15.1
+    entrypoint: npm
+    args: ["run", "create-env"]
+    env:
+      - 'CONTENTFUL_SPACE_ID=${_CONTENTFUL_SPACE_ID}'
+      - 'CONTENTFUL_ACCESS_TOKEN=${_CONTENTFUL_ACCESS_TOKEN}'
+  - name: node:10.15.1
     entrypoint: yarn
     args: ["add", "firebase-tools"]
   - name: node:10.15.1
