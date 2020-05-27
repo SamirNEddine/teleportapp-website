@@ -8,6 +8,7 @@ steps:
     env:
       - 'CONTENTFUL_SPACE_ID=${_CONTENTFUL_SPACE_ID}'
       - 'CONTENTFUL_ACCESS_TOKEN=${_CONTENTFUL_ACCESS_TOKEN}'
+      - 'CONTENTFUL_ENVIRONMENT=${_CONTENTFUL_ENVIRONMENT}'
   - name: node:10.15.1
     entrypoint: yarn
     args: ["add", "firebase-tools"]
