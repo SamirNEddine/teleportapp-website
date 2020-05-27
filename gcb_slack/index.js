@@ -29,7 +29,7 @@ const eventToBuild = (data) => {
 // createSlackMessage creates a message from a build object.
 const createSlackMessage = (build) => {
   const message = {
-    text: `Build \`${build.id}\``,
+    text: `Build - Trigger: \`${build.buildTriggerId}\` -  ID: \`${build.id}\``,
     mrkdwn: true,
     attachments: [
       {
