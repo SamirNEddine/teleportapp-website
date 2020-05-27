@@ -29,7 +29,7 @@ const eventToBuild = (data) => {
 // createSlackMessage creates a message from a build object.
 const createSlackMessage = (build) => {
   const message = {
-    text: `Repository: \`${build.substitutions.REPO_NAME}\` -  Environment: \`Test\``,
+    text: `Repository: \`${build.substitutions.REPO_NAME}\` -  Environment: \`${build.substitutions._ENV}\``,
     mrkdwn: true,
     attachments: [
       {

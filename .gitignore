@@ -135,3 +135,6 @@ yarn-error.log
 
 #firebase
 .firebase
+
+#GCP
+.service-account
