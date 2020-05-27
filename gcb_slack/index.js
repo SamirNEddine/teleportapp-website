@@ -24,12 +24,12 @@ module.exports.subscribeSlack = (pubSubEvent, context) => {
 // eventToBuild transforms pubsub event message to a build object.
 const eventToBuild = (data) => {
   return JSON.parse(Buffer.from(data, 'base64').toString());
-}
+};
 
 // createSlackMessage creates a message from a build object.
 const createSlackMessage = (build) => {
   const message = {
-    text: `Build - Trigger: \`${build.buildTriggerId}\` -  ID: \`${build.id}\``,
+    text: `Repository: \`${build.substitutions.REPO_NAME}\` -  Environment: \`Test\``,
     mrkdwn: true,
     attachments: [
       {
@@ -43,4 +43,4 @@ const createSlackMessage = (build) => {
     ]
   };
   return message;
-}
+};
