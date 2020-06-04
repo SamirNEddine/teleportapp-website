@@ -51,7 +51,7 @@ const ProductPage = function () {
                 </div>
             </div>
             <div className={ProductSectionStyles.container}>
-                <h1>Your assistant for <span style={{color:'#E127EB'}}>remote teams</span></h1>
+                <h1 className={ProductSectionStyles.mainTitle}>Your assistant for <span style={{color:'#E127EB'}}>remote teams</span></h1>
                 <img src={PurpleStart} className={ProductSectionStyles.separator} alt='Purple start'/>
                 <ul>
                     <li>
