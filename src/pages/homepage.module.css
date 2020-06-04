@@ -1,0 +1,176 @@
+.top-branding-section-container {
+    position: relative;
+    width: 100%;
+    height: 615px;
+    display: flex;
+    background: linear-gradient(233.06deg, #E127EB 33.46%, #8800F0 66.11%, #00F2FF 100.76%);
+}
+.top-branding-section-container .left {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: safe flex-end ;
+}
+.top-branding-section-container .left ul {
+    position: relative;
+    top: 32px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 0 20px;
+}
+.top-branding-section-container h1 {
+    position: relative;
+    width: 576px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 87px;
+    color: white;
+}
+.top-branding-section-container h2 {
+    position: relative;
+    top: -12px;
+    width: 497px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 41px;
+    color: white;
+}
+.top-branding-section-container form {
+    position: relative;
+}
+.top-branding-section-container form input {
+    position: relative;
+    top: 3px;
+    width: 272px;
+    height: 48px;
+    background: #F7F9FA;
+    border: 2px solid #030163;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #030163;
+}
+.top-branding-section-container form input:focus {
+    outline-width: 0;
+}
+.top-branding-section-container form input::placeholder {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #6D63A6;
+}
+.top-branding-section-container form button {
+    position: relative;
+    border: none;
+    top: 3px;
+    left: -4px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding: 10px;
+    height: 48px;
+    background: #030163;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+}
+.top-branding-section-container form button:active {
+    outline-width: 0;
+}
+.top-branding-section-container form button:focus {
+    outline-width: 0;
+}
+.top-branding-section-container .right {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+.top-branding-section-container img {
+    position: relative;
+    width: 100%;
+    max-width: 512px;
+    left: 28px;
+    top: 87px;
+}
+
+/* Media queries */
+@media screen and (max-width: 1200px) {
+    .top-branding-section-container .left {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .top-branding-section-container {
+        display: block;
+    }
+    .top-branding-section-container .left {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .top-branding-section-container .right {
+        display: none;
+    }
+    .top-branding-section-container .left ul {
+        top: -58px;
+        padding: 0 0 0 40px;
+    }
+}
+@media screen and (max-width: 540px) {
+    .top-branding-section-container {
+        background: #8800F0;
+        height: 130vw;
+    }
+    .top-branding-section-container .left ul {
+        top: -38px;
+        padding: 0 0 0 40px;
+    }
+    .top-branding-section-container h1 {
+        width: 100%;
+        line-height: 16vw;
+        font-size: 12vw;
+    }
+    .top-branding-section-container h2 {
+        width: 90%;
+        top: 20px;
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 5vw;
+        line-height: 7vw;
+    }
+    .top-branding-section-container form {
+        width: 100%;
+        top: 40px;
+    }
+    .top-branding-section-container form input {
+        width: 88%;
+    }
+    .top-branding-section-container form button {
+        display: block;
+        width: 88%;
+        top: 8px;
+        left: 0;
+        border-radius: 3px;
+    }
+}
