@@ -32,3 +32,10 @@
 .selected-navigation-item {
     color: burlywood;
 }
+
+@media screen and (max-width: 540px) {
+    .container {
+        height: 72px;
+    }
+
+}

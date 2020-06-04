@@ -1,3 +1,17 @@
+@font-face {
+    font-family: Nunito;
+    src: url(../../assets/Nunito-Bold.woff) format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+}
+@font-face {
+    font-family: Nunito;
+    src: url(../../assets/Nunito-Regular.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+}
 body {
     margin: 0;
 }
