@@ -1,7 +1,17 @@
 .container {
-    background-color: #8800f0;
-    height: 60px;
+    position: relative;
+    background-color: #030163;
+    height: 98px;
     width: 100%;
+}
+.teleport-logo {
+    position: absolute;
+    width: 180px;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
 }
 .navigation-list {
     position: relative;
