@@ -1,0 +1,88 @@
+.container {
+    position: relative;
+    width: 100%;
+    height: 1466px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container h1 {
+    position: relative;
+    top: 24px;
+    width: 380px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 65px;
+    text-align: center;
+    color: #322279;
+}
+.container .separator {
+    position: relative;
+    top: 10px;
+}
+.container ul {
+    position: relative;
+    top: 70px;
+    list-style-type: none;
+    margin: 0;
+}
+.container ul li {
+    display: flex;
+    align-items: start;
+    height: 390px;
+}
+.alternate {
+    position: relative;
+    left: 110px;
+}
+.alternate  .number {
+    order: 2;
+}
+.feature-description {
+    position: relative;
+    left: -24px;
+    min-height: 204px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+
+}
+.feature-illustration {
+    padding-left: 40px;
+}
+.alternate .feature-illustration  {
+    padding-left: 0;
+    padding-right: 110px;
+}
+.alternate .feature-description {
+    order: 2;
+}
+.container ul li .feature-description h1 {
+    position: absolute;
+    top: unset;
+    left: 12px;
+    bottom: 120px;
+    margin: 0;
+    width: 460px;
+    text-align: left;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 65px;
+    color: #6100C6;
+}
+.container ul li .feature-description h2 {
+    position: absolute;
+    left: 12px;
+    top: 86px;
+    margin: 0;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 41px;
+    color: #030163;
+}
