@@ -1,4 +1,5 @@
 import React from "react"
+import axios from "axios";
 import Layout from "../components/layout";
 import {graphql, useStaticQuery} from 'gatsby';
 import TopSectionStyles from './homepage-top-section.module.css';
@@ -29,6 +30,18 @@ const productFeaturesQuery = graphql`
 const ProductPage = function () {
     const {allContentfulProductFeatureDescription} = useStaticQuery(productFeaturesQuery);
 
+    const onWaitingListFormSubmit = async (e) => {
+        e.preventDefault();
+        const email = new FormData(e.target).get('email');
+        if(email){
+            const response = await axios.post('https://api.teleport.so/stable/waiting-list/', {email});
+            if(response.status === 200){
+                alert('ok!');
+            }else{
+
+            }
+        }
+    };
     const {edges: productFeatures} = allContentfulProductFeatureDescription;
     return (
         <Layout>
@@ -38,8 +51,8 @@ const ProductPage = function () {
                         <li><h1>Your remote working assistant</h1></li>
                         <li><h2>Let your team know how and when is best to reach you in few clicks.</h2></li>
                         <li>
-                            <form>
-                                <input type='email' placeholder='Your work email'/>
+                            <form action="" onSubmit={onWaitingListFormSubmit}>
+                                <input type='email' name='email' placeholder='Your work email'/>
                                 <button>Get early access</button>
                             </form>
                         </li>
