@@ -3,4 +3,47 @@
     height: 183px;
     width: 100%;
     background: #EFEFFC;
+    display: flex;
+}
+.branding-container {
+
+}
+.section-title {
+
+}
+.main-pages {
+
+}
+.legal-pages {
+
+}
+.contact-container {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+.contact-container .section-title {
+    padding: 14px 150px 0 0;
+    max-width: 180px;
+    align-self: flex-end;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: right;
+    color: #6100C6;
+}
+.contact-container ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 150px 0 0;
+}
+.contact-container li {
+    float: right;
+}
+.contact-container li a {
+    display: block;
+    padding-left: 16px;
+    text-decoration: none;
 }
