@@ -1,0 +1,53 @@
+.container {
+    padding: 30px 0 40px 80px;
+    max-width: 800px;
+}
+a {
+    text-decoration: underline;
+}
+p {
+    padding: 0 80px 0 0;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #030163;
+}
+
+h1 {
+    padding: 20px 80px 0 0;
+    margin: 0;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 52px;
+    line-height: 65px;
+    color: #030163;
+}
+h2 {
+    padding: 50px 80px 0 0;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 41px;
+    color: #030163;
+}
+h3 {
+    padding: 30px 80px 0 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 31px;
+    color: #030163;
+}
+h4 {
+    padding: 10px 80px 0 0;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    color: #030163;
+}
