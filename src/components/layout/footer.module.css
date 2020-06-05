@@ -2,6 +2,9 @@
     position: relative;
     width: 100%;
     background: #EFEFFC;
+}
+.sub-container {
+    position: relative;
     display: flex;
 }
 .branding-container {
@@ -15,7 +18,8 @@
     width: 160px;
 }
 .branding-container p {
-    padding: 0 0 0 38px;
+    padding: 6px 0 0 38px;
+    margin: 0;
     font-family: Nunito;
     font-style: normal;
     font-weight: bold;
@@ -31,19 +35,26 @@
     line-height: 25px;
     color: #8800F0;
 }
+a {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #030163;
+    text-decoration: none;
+}
 .main-pages {
-    padding: 24px 0;
+    padding: 24px 20px;
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 .legal-pages {
-    padding: 24px 0;
+    padding: 24px 20px;
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 .contact-container {
     padding: 24px 0;
@@ -75,4 +86,59 @@
     display: block;
     padding-left: 16px;
     text-decoration: none;
+}
+
+@media screen and (max-width: 960px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+    }
+    .sub-container {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .branding-container img {
+        width: 300px;
+    }
+    .branding-container p {
+        display: none;
+    }
+    .main-pages {
+        position: relative;
+        width: 100%;
+        padding: 0 0 18px 0;
+    }
+    .legal-pages {
+        position: relative;
+        width: 100%;
+        padding: 0 0 18px 0;
+    }
+    .contact-container {
+        position: relative;
+        width: 100%;
+        padding: 0;
+        padding: 0 0 18px 0;
+    }
+    .contact-container .section-title {
+        position: relative;
+        padding: 0;
+        text-align: left;
+        align-self: start;
+        display: unset;
+        margin: 0;
+        max-width: unset;
+    }
+    .contact-container ul {
+        padding: 0;
+        margin: 14px 0 0 0;
+    }
+    .contact-container li {
+        float: left;
+    }
+    .contact-container li a {
+        padding: 0 32px 0 0;
+    }
 }
