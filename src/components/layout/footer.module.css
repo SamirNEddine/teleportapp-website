@@ -1,29 +1,58 @@
 .container {
     position: relative;
-    height: 183px;
     width: 100%;
     background: #EFEFFC;
     display: flex;
 }
 .branding-container {
-
+    padding: 32px 0;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.branding-container img {
+    width: 160px;
+}
+.branding-container p {
+    padding: 0 0 0 38px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    color: #030163;
 }
 .section-title {
-
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    color: #8800F0;
 }
 .main-pages {
-
+    padding: 24px 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .legal-pages {
-
+    padding: 24px 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .contact-container {
-    flex: 2;
+    padding: 24px 0;
+    flex: 3;
     display: flex;
     flex-direction: column;
 }
 .contact-container .section-title {
-    padding: 14px 150px 0 0;
+    padding: 0 150px;
     max-width: 180px;
     align-self: flex-end;
     font-family: Nunito;
