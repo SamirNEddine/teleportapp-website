@@ -31,5 +31,6 @@ module.exports = {
                 icon: `src/assets/teleport-logo-mark-full-colour-rgb.png`
             },
         },
+        `gatsby-plugin-react-helmet`
     ]
 };
