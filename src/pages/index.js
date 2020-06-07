@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import axios from "axios";
 import Layout from "../components/layout";
 import {graphql, useStaticQuery} from 'gatsby';
@@ -45,6 +46,11 @@ const ProductPage = function () {
     const {edges: productFeatures} = allContentfulProductFeatureDescription;
     return (
         <Layout>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Your remote working assistant | Teleport</title>
+                <link rel="canonical" href="https://www.teleport.so" />
+            </Helmet>
             <div className={TopSectionStyles.container}>
                 <div className={TopSectionStyles.left}>
                     <ul>
