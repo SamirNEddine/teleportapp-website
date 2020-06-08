@@ -20,6 +20,10 @@
     margin: 0;
     padding: 0 0 0 20px;
 }
+.container .left li {
+    position: relative;
+    display: block;
+}
 .container h1 {
     position: relative;
     width: 576px;
@@ -97,6 +101,13 @@
 }
 .container form button:focus {
     outline-width: 0;
+}
+.waiting-list-loader {
+    position: absolute;
+    width: 30px;
+    top: 12px;
+    margin: 0;
+    padding: 0;
 }
 .container .right {
     position: relative;
