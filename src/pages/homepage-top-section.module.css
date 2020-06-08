@@ -187,4 +187,8 @@
         left: 0;
         border-radius: 3px;
     }
+    .waiting-list-loader {
+        left: 39%;
+        top: -32px;
+    }
 }
