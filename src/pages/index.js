@@ -1,8 +1,10 @@
-import React from "react"
+import React, {useState} from "react"
 import { Helmet } from "react-helmet"
 import axios from "axios";
 import Layout from "../components/layout";
 import {graphql, useStaticQuery} from 'gatsby';
+import Loader from 'react-loader-spinner'
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 import TopSectionStyles from './homepage-top-section.module.css';
 import TopSectionIllustration from '../assets/top-section-illustration.svg';
 import ProductSectionStyles from './homepage-product-section.module.css';
@@ -30,16 +32,22 @@ const productFeaturesQuery = graphql`
 `;
 const ProductPage = function () {
     const {allContentfulProductFeatureDescription} = useStaticQuery(productFeaturesQuery);
+    const [formState, setFormState] = useState('initial');
 
     const onWaitingListFormSubmit = async (e) => {
         e.preventDefault();
         const email = new FormData(e.target).get('email');
         if(email){
-            const response = await axios.post('https://api.teleport.so/stable/waiting-list/', {email});
-            if(response.status === 200){
-                alert('ok!');
-            }else{
-
+            setFormState('loading');
+            try {
+                const response = await axios.post('https://api.teleport.so/stable/waiting-list/', {email});
+                if(response.status === 200){
+                    setFormState('confirmed');
+                }else{
+                    setFormState('initial');
+                }
+            }catch(e){
+                setFormState('initial');
             }
         }
     };
@@ -58,11 +66,11 @@ const ProductPage = function () {
                         <li><h2>Let your team know how and when is best to reach you in few clicks.</h2></li>
                         <li>
                             <form action="" onSubmit={onWaitingListFormSubmit}>
-                                <input type='email' name='email' placeholder='Your work email'/>
-                                <button>Get early access</button>
+                                <input type='email' name='email' placeholder='Your work email' disabled={formState === 'loading'}/>
+                                <button disabled={formState === 'loading'}> {formState === 'confirmed' ? 'Stay tuned! ✨' : 'Get early access'}</button>
+                                {formState === 'loading' ? (<span className={TopSectionStyles.waitingListLoader}><Loader type="Puff" color="#00BFFF" height={30} width={30} /></span>) : ('')}
                             </form>
                         </li>
-
                     </ul>
                 </div>
                 <div className={TopSectionStyles.right}>
