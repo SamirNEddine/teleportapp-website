@@ -85,7 +85,7 @@ const ProductPage = function () {
                         <img src={Number1} className={ProductSectionStyles.number} alt='Number-1'/>
                         <div className={ProductSectionStyles.featureDescription}>
                             <h1>Your context</h1>
-                            <h2>Define how your day look like.</h2>
+                            <h2>Define how your day looks like.</h2>
                         </div>
                         <img src={ProductIllustration1} className={ProductSectionStyles.featureIllustration}  alt='product-illustration-1'/>
                     </li>
