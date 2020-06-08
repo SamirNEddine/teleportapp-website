@@ -1,5 +1,7 @@
 import React, {useState} from "react"
+import WithTranslations from '../components/i18n/withTranslations';
 import { Helmet } from "react-helmet"
+import i18n from "../components/i18n/config"
 import axios from "axios";
 import Layout from "../components/layout";
 import {graphql, useStaticQuery} from 'gatsby';
@@ -56,7 +58,7 @@ const ProductPage = function () {
         <Layout>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>Your remote working assistant | Teleport</title>
+                <title>{i18n.t('Your remote working assistant | Teleport')}</title>
                 <link rel="canonical" href="https://www.teleport.so" />
             </Helmet>
             <div className={TopSectionStyles.container}>
@@ -124,4 +126,4 @@ const ProductPage = function () {
         </Layout>
     )
 };
-export default ProductPage;
+export default WithTranslations()(ProductPage);
