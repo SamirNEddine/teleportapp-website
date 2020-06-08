@@ -1,14 +1,14 @@
 import React from "react";
 import WithTranslations from '../i18n/withTranslations';
 import i18n from "../i18n/config"
-import {Link} from "gatsby";
+import {LocalizedLink} from '../i18n/localizedLink';
 import FooterStyles from './footer.module.css';
 import TeleportLogo from '../../assets/teleport-logo-full-colour.svg';
 import ContactMail from '../../assets/contact-mail.svg';
 import ContactLinkedIn from '../../assets/contact-linkedIn.svg';
 import ContactTwitter from '../../assets/contact-twitter.svg';
 
-const Footer = function () {
+const Footer = function ({language}) {
     return(
         <div className={FooterStyles.container}>
             <div className={FooterStyles.subContainer}>
@@ -18,11 +18,11 @@ const Footer = function () {
                 </div>
                 <div className={FooterStyles.mainPages}>
                     <div className={FooterStyles.sectionTitle}>{i18n.t('Footer - About Teleport')}</div>
-                    <Link to="/">{i18n.t('Footer - Product')}</Link>
+                    <LocalizedLink language={language} to="/">{i18n.t('Footer - Product')}</LocalizedLink>
                 </div>
                 <div className={FooterStyles.legalPages}>
                     <div className={FooterStyles.sectionTitle}>{i18n.t('Footer - Legal')}</div>
-                    <Link to="/privacy">{i18n.t('Footer - Privacy policy')}</Link>
+                    <LocalizedLink language={language} to="/privacy">{i18n.t('Footer - Privacy policy')}</LocalizedLink>
                 </div>
                 <div className={FooterStyles.contactContainer}>
                     <h2 className={FooterStyles.sectionTitle}>{i18n.t('Footer - Created by a fully remote team')}</h2>
