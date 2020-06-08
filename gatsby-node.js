@@ -5,8 +5,8 @@ exports.onCreatePage = ({page, actions}) => {
     const {createPage, deletePage} = actions;
     deletePage(page);
     Object.keys(supportedLanguages).map(lang => {
-        const {path, is_default} = supportedLanguages[lang];
-        const localizedPath = is_default ? page.path : `${path}${page.path}`;
+        const {path, isDefault} = supportedLanguages[lang];
+        const localizedPath = isDefault ? page.path : `${path}${page.path}`;
         if (!translationsCache[lang]) {
             translationsCache[lang] = require(`./src/translations/${lang}`);
         }

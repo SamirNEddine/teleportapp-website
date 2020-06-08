@@ -1,11 +1,11 @@
 module.exports = {
     en: {
-        is_default: true,
+        isDefault: true,
         path: 'en',
-        display_name: 'English',
+        displayName: 'English',
     },
     fr: {
         path: 'fr',
-        display_name: 'Français',
+        displayName: 'Français',
     }
 };
