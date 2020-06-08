@@ -66,8 +66,8 @@ const ProductPage = function () {
                         <li><h2>Let your team know how and when is best to reach you in few clicks.</h2></li>
                         <li>
                             <form action="" onSubmit={onWaitingListFormSubmit}>
-                                <input type='email' name='email' placeholder='Your work email' disabled={formState === 'loading'}/>
-                                <button disabled={formState === 'loading'}> {formState === 'confirmed' ? 'Stay tuned! ✨' : 'Get early access'}</button>
+                                <input type='email' name='email' placeholder='Your work email' disabled={formState === 'loading'} onChange={ _ => {if(formState !== 'initial') setFormState('initial')}}/>
+                                <button disabled={formState !== 'initial'}> {formState === 'confirmed' ? 'Stay tuned!✨' : 'Get early access'}</button>
                                 {formState === 'loading' ? (<span className={TopSectionStyles.waitingListLoader}><Loader type="Puff" color="#00BFFF" height={30} width={30} /></span>) : ('')}
                             </form>
                         </li>

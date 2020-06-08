@@ -80,6 +80,7 @@
     border: none;
     top: 3px;
     left: -4px;
+    min-width: 220px;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     padding: 10px;
