@@ -9,6 +9,8 @@ steps:
       - 'CONTENTFUL_SPACE_ID=${_CONTENTFUL_SPACE_ID}'
       - 'CONTENTFUL_ACCESS_TOKEN=${_CONTENTFUL_ACCESS_TOKEN}'
       - 'CONTENTFUL_ENVIRONMENT=${_CONTENTFUL_ENVIRONMENT}'
+      - 'LOCIZE_API_KEY=${_LOCIZE_API_KEY}'
+      - 'LOCIZE_PROJECT_ID=${_LOCIZE_PROJECT_ID}'
   - name: node:10.15.1
     entrypoint: yarn
     args: ["add", "firebase-tools"]
