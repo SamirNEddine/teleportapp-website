@@ -138,3 +138,6 @@ yarn-error.log
 
 #GCP
 .service-account
+
+#translations
+src/translations

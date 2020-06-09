@@ -1,5 +1,6 @@
+
 {
-  "Your remote working assistant | Teleport" : "Ton assistant de remote  | Teleport",
+  "Your remote working assistant | Teleport" : "Your remote working assistant | Teleport",
   "Your remote working assistant" : "Your remote working assistant",
   "Let your team know how and when is best to reach you in few clicks.": "Let your team know how and when is best to reach you in few clicks.",
   "Your work email": "Your work email",
@@ -11,7 +12,8 @@
   "Define how your day looks like.": "Define how your day looks like.",
   "Update your status": "Update your status",
   "Automatically update your Slack status depending on your availability level.": "Automatically update your Slack status depending on your availability level.",
-  "Block slots on your Calendar": "Block a personalized schedule on your calendar to get the best out of your working day.",
+  "Block slots on your Calendar": "Block slots on your Calendar",
+  "Block a personalized schedule on your calendar to get the best out of your working day.": "Block a personalized schedule on your calendar to get the best out of your working day.",
   "Footer - Your remote working assistant": "Your remote working assistant",
   "Footer - About Teleport": "About Teleport",
   "Footer - Product": "Product",
