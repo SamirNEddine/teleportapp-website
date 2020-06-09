@@ -6,8 +6,8 @@
   "license": "MIT",
   "scripts": {
     "create-env-file": "printenv > .env",
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "build": "node i18n/locize-fetch.js && gatsby build",
+    "develop": "node i18n/locize-fetch.js && gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",

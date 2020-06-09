@@ -10,7 +10,7 @@ const supportedLanguages = ['en', 'fr'];
 const LOCIZE_API_KEY = process.env.LOCIZE_API_KEY;
 const LOCIZE_PROJECT_ID = process.env.LOCIZE_PROJECT_ID;
 
-/** Source of 'truth': local en file**/
+/** Source of 'truth': local file **/
 const getDiff = function(local, hosted) {
     const diffToAdd = {};
     const diffToRemove = {};
@@ -33,7 +33,7 @@ const getDiff = function(local, hosted) {
         const currentTranslationRequestResponse = await axios.get(`https://api.locize.app/${LOCIZE_PROJECT_ID}/latest/en/en`);
         const {data: locizeTranslations} = currentTranslationRequestResponse;
         //Get local translations
-        const localTranslations = require('../src/translations/en.json');
+        const localTranslations = require('../src/i18n/translationKeysReference.json');
         //Get diff
         const {diffToAdd, diffToRemove} = getDiff(localTranslations, locizeTranslations);
         if(Object.keys(diffToAdd).length !== 0 && diffToAdd.constructor === Object) {
@@ -49,6 +49,10 @@ const getDiff = function(local, hosted) {
             console.log("No diff to remove!");
         }
         //Get translations and write it to file
+        const translationsDirectoryPath = __dirname + '/../src/translations';
+        if (!fs.existsSync(translationsDirectoryPath)){
+            fs.mkdirSync(translationsDirectoryPath);
+        }
         await Promise.all( supportedLanguages.map(async (language) => {
             console.log(`Fetching ${language} translations`);
             const translationsRequestResponse = await axios.get(`https://api.locize.app/${LOCIZE_PROJECT_ID}/latest/${language}/translation`);
