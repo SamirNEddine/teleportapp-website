@@ -48,7 +48,7 @@ const ProductPage = function () {
                 <div className={TopSectionStyles.left}>
                     <ul>
                         <li><h1>{i18n.t('Your remote working assistant')}</h1></li>
-                        <li><h2>{i18n.t('Let your team know how and when is best to reach you in few clicks.')}</h2></li>
+                        <li><h2>{i18n.t('Let your team know how and when is best to reach you in few clicks')}</h2></li>
                         <li>
                             <form action="" onSubmit={onWaitingListFormSubmit}>
                                 <input type='email' name='email' placeholder={i18n.t('Your work email')} disabled={formState === 'loading'} onChange={ _ => {if(formState !== 'initial') setFormState('initial')}}/>
@@ -70,7 +70,7 @@ const ProductPage = function () {
                         <img src={Number1} className={ProductSectionStyles.number} alt='Number-1'/>
                         <div className={ProductSectionStyles.featureDescription}>
                             <h1>{i18n.t('Your context')}</h1>
-                            <h2>{i18n.t('Define how your day looks like.')}</h2>
+                            <h2>{i18n.t('Define how your day looks like')}</h2>
                         </div>
                         <img src={ProductIllustration1} className={ProductSectionStyles.featureIllustration}  alt='product-illustration-1'/>
                     </li>
@@ -78,7 +78,7 @@ const ProductPage = function () {
                         <img src={Number2} className={ProductSectionStyles.number} alt='Number-2'/>
                         <div className={ProductSectionStyles.featureDescription}>
                             <h1>{i18n.t('Update your status')}</h1>
-                            <h2>{i18n.t('Automatically update your Slack status depending on your availability level.')}</h2>
+                            <h2>{i18n.t('Automatically update your Slack status depending on your availability level')}</h2>
                         </div>
                         <img src={ProductIllustration2} className={ProductSectionStyles.featureIllustration} alt='product-illustration-2'/>
                     </li>
@@ -86,7 +86,7 @@ const ProductPage = function () {
                         <img src={Number3} className={ProductSectionStyles.number} alt='Number-3'/>
                         <div className={ProductSectionStyles.featureDescription}>
                             <h1>{i18n.t('Block slots on your Calendar')}</h1>
-                            <h2>{i18n.t('Block a personalized schedule on your calendar to get the best out of your working day.')}</h2>
+                            <h2>{i18n.t('Block a personalized schedule on your calendar to get the best out of your working day')}</h2>
                         </div>
                         <img src={ProductIllustration3} className={ProductSectionStyles.featureIllustration} alt='product-illustration-3'/>
                     </li>
