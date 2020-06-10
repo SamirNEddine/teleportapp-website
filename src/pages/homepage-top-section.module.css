@@ -3,7 +3,7 @@
     width: 100%;
     height: 615px;
     display: flex;
-    background: #8800F0;
+    background: linear-gradient(247.24deg, #E127EB -25.19%, #8800F0 35.96%, #00F2FF 100.85%);;
 }
 .container .left {
     position: relative;
