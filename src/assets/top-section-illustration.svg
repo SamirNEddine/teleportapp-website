@@ -9,12 +9,11 @@
 <g filter="url(#filter2_d)">
 <circle cx="356" cy="134" r="32" fill="#41009D"/>
 </g>
-<rect x="336" y="119" width="32" height="30.8632" fill="url(#pattern0)"/>
+<rect x="340" y="119" width="32" height="30.8632" fill="url(#pattern0)"/>
 <g filter="url(#filter3_dddd)">
 <rect x="160.5" y="116.164" width="216.226" height="247" rx="4.5" fill="white" stroke="#C2C3D2"/>
 <rect opacity="0.05" x="160.5" y="116.164" width="216.226" height="247" rx="4.5" fill="#EFEFFC" stroke="#C2C3D2"/>
 </g>
-<line x1="160" y1="362.259" x2="375.416" y2="362.259" stroke="#E9EDF1"/>
 <circle cx="269.066" cy="213.869" r="67.4307" fill="#E127EB"/>
 <circle cx="269.623" cy="213.311" r="55.7278" fill="white"/>
 <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="201" y="146" width="68" height="79">
