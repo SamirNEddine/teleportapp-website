@@ -3,7 +3,7 @@
     width: 100%;
     height: 615px;
     display: flex;
-    background: linear-gradient(233.06deg, #E127EB 33.46%, #8800F0 66.11%, #00F2FF 100.76%);
+    background: #8800F0;
 }
 .container .left {
     position: relative;
@@ -152,7 +152,6 @@
 }
 @media screen and (max-width: 540px) {
     .container {
-        background: #8800F0;
         height: 130vw;
     }
     .container .left ul {
