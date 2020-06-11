@@ -34,7 +34,7 @@ function SEO({ description, lang, meta, title, image }) {
         title: title || defaultTitle,
         description: description || defaultDescription,
         metaDescription: description || defaultDescription,
-        image: `${siteUrl}${image || defaultImage}`,
+        image: `${image ? `${siteUrl}${image}` : defaultImage}`,
         url: `${siteUrl}${pathname}`,
         lang
     };
