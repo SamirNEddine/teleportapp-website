@@ -12,6 +12,14 @@ module.exports = {
   },
     plugins: [
         {
+            resolve: `gatsby-plugin-gtag`,
+            options: {
+                trackingId: process.env.GTAGS_ID,
+                head: false,
+                anonymize: true,
+            },
+        },
+        {
             resolve: 'gatsby-source-contentful',
             options: {
                 spaceId: process.env.CONTENTFUL_SPACE_ID,
