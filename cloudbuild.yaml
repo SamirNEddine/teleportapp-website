@@ -11,6 +11,8 @@ steps:
       - 'CONTENTFUL_ENVIRONMENT=${_CONTENTFUL_ENVIRONMENT}'
       - 'LOCIZE_API_KEY=${_LOCIZE_API_KEY}'
       - 'LOCIZE_PROJECT_ID=${_LOCIZE_PROJECT_ID}'
+      - 'HOST=${_HOST}'
+      - 'ENV=${_ENV}'
       - 'GTAGS_ID=${_GTAGS_ID}'
   - name: node:10.15.1
     entrypoint: yarn

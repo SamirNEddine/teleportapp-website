@@ -8,7 +8,8 @@ require("dotenv").config();
 module.exports = {
   siteMetadata: {
       title: 'Teleport',
-      author: 'Teleport'
+      author: 'Teleport',
+      siteUrl: process.env.HOST
   },
     plugins: [
         {
@@ -39,6 +40,24 @@ module.exports = {
                 icon: `src/assets/teleport-logo-mark-full-colour-rgb.png`
             },
         },
-        `gatsby-plugin-react-helmet`
+        `gatsby-plugin-react-helmet`,
+        {
+            resolve: 'gatsby-plugin-robots-txt',
+            options: {
+                host: process.env.HOST,
+                resolveEnv: () => process.env.ENV,
+                env: {
+                    development: {
+                        policy: [{ userAgent: '*', disallow: ['/'] }]
+                    },
+                    test: {
+                        policy: [{ userAgent: '*', disallow: ['/'] }]
+                    },
+                    production: {
+                        policy: [{ userAgent: '*', allow: '/' }]
+                    }
+                }
+            }
+        }
     ]
 };
