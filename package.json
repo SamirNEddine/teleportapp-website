@@ -20,6 +20,7 @@
     "gatsby": "^2.18.4",
     "gatsby-plugin-manifest": "^2.4.10",
     "gatsby-plugin-react-helmet": "^3.3.3",
+    "gatsby-plugin-robots-txt": "^1.5.1",
     "gatsby-source-contentful": "^2.3.11",
     "i18next": "^19.4.5",
     "react": "^16.12.0",
