@@ -13,7 +13,7 @@ module.exports = {
       twitterUsername: 'teleport_io',
       description: "Let your team know how and when is best to reach you.",
       url: "https://teleport.so",
-      image: "https://storage.googleapis.com/teleport-main-website-assets/images/teleport-logo-full-colour.png",
+      image: "https://storage.googleapis.com/teleport-main-website-assets/images/og-vertical-1200.png",
       siteUrl: process.env.HOST
   },
     plugins: [
