@@ -8,7 +8,12 @@ require("dotenv").config();
 module.exports = {
   siteMetadata: {
       title: 'Teleport',
+      titleTemplate: 'Your remote working assistant | Teleport',
       author: 'Teleport',
+      twitterUsername: 'teleport_io',
+      description: "Let your team know how and when is best to reach you.",
+      url: "https://teleport.so",
+      image: "/images/teleport-default.svg",
       siteUrl: process.env.HOST
   },
     plugins: [

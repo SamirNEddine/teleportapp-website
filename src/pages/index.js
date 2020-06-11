@@ -1,8 +1,8 @@
 import React, {useState} from "react"
 import WithTranslations from '../components/i18n/withTranslations';
-import { Helmet } from "react-helmet"
 import i18n from "../components/i18n/config"
 import axios from "axios";
+import SEO from "../components/seo"
 import Layout from "../components/layout";
 import Loader from 'react-loader-spinner'
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
@@ -17,7 +17,7 @@ import ProductIllustration2 from '../assets/product-illustration-2.svg';
 import Number3 from '../assets/big-number-3.svg';
 import ProductIllustration3 from '../assets/product-illustration-3.svg';
 
-const ProductPage = function () {
+const ProductPage = function ({language}) {
     const [formState, setFormState] = useState('initial');
 
     const onWaitingListFormSubmit = async (e) => {
@@ -39,11 +39,7 @@ const ProductPage = function () {
     };
     return (
         <Layout>
-            <Helmet>
-                <meta charSet="utf-8" />
-                <title>{i18n.t('Your remote working assistant | Teleport')}</title>
-                <link rel="canonical" href="https://www.teleport.so" />
-            </Helmet>
+            <SEO title={i18n.t('Your remote working assistant | Teleport')} description={i18n.t('Let your team know how and when is best to reach you in few clicks')} lang={language} />
             <div className={TopSectionStyles.container}>
                 <div className={TopSectionStyles.left}>
                     <ul>
