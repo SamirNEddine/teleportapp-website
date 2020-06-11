@@ -48,6 +48,10 @@ function SEO({ description, lang, meta, title, image }) {
             titleTemplate={titleTemplate}
             meta={[
                 {
+                    name: `og:site_name\t`,
+                    content: 'Teleport'
+                },
+                {
                     name: `og:url`,
                     content: seo.url
                 },
@@ -57,6 +61,14 @@ function SEO({ description, lang, meta, title, image }) {
                 },
                 {
                     name: 'og:image',
+                    content: seo.image
+                },
+                {
+                    name: 'og:image:type',
+                    content: 'image/png'
+                },
+                {
+                    name: 'og:image:secure_url',
                     content: seo.image
                 },
                 {
