@@ -64,6 +64,14 @@ function SEO({ description, lang, meta, title, image }) {
                     content: seo.image
                 },
                 {
+                    name: 'og:image:width',
+                    content: '680.25'
+                },
+                {
+                    name: 'og:image:height',
+                    content: '137.75'
+                },
+                {
                     name: 'og:image:type',
                     content: 'image/png'
                 },
