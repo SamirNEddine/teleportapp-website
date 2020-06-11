@@ -13,6 +13,7 @@ steps:
       - 'LOCIZE_PROJECT_ID=${_LOCIZE_PROJECT_ID}'
       - 'HOST=${_HOST}'
       - 'ENV=${_ENV}'
+      - 'GTAGS_ID=${_GTAGS_ID}'
   - name: node:10.15.1
     entrypoint: yarn
     args: ["add", "firebase-tools"]
