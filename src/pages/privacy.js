@@ -3,7 +3,8 @@ import Layout from "../components/layout";
 import {graphql, useStaticQuery} from 'gatsby';
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Styles from './legal.module.css';
-import {Helmet} from "react-helmet";
+import SEO from "../components/seo"
+import i18n from "../components/i18n/config";
 
 const privacyPolicyQuery = graphql`
     query {
@@ -15,16 +16,12 @@ const privacyPolicyQuery = graphql`
     }
 `;
 
-const PrivacyPage = function () {
+const PrivacyPage = function ({language}) {
     const {contentfulLegalInformation: privacyPolicyNode} = useStaticQuery(privacyPolicyQuery);
 
     return (
         <Layout>
-            <Helmet>
-                <meta charSet="utf-8" />
-                <title>Privacy policy | Teleport</title>
-                <link rel="canonical" href="https://www.teleport.so/privacy" />
-            </Helmet>
+            <SEO title={i18n.t('Privacy policy | Teleport')} description={i18n.t('Privacy policy')} lang={language} />
             <div className={Styles.container}>
                 {documentToReactComponents(privacyPolicyNode.content.json)}
             </div>
