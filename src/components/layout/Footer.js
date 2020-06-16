@@ -23,6 +23,7 @@ const Footer = function ({language}) {
                 </div>
                 <div className={FooterStyles.legalPages}>
                     <div className={FooterStyles.sectionTitle}>{i18n.t('Footer - Legal')}</div>
+                    <LocalizedLink language={language} to="/terms">{i18n.t('Footer - Terms')}</LocalizedLink>
                     <LocalizedLink language={language} to="/privacy">{i18n.t('Footer - Privacy policy')}</LocalizedLink>
                 </div>
                 <div className={FooterStyles.contactContainer}>

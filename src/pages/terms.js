@@ -7,9 +7,9 @@ import SEO from "../components/seo"
 import WithTranslations from '../components/i18n/withTranslations';
 import i18n from "../components/i18n/config";
 
-const privacyPolicyQuery = graphql`
+const termsQuery = graphql`
     query {
-        contentfulLegalInformation(title: {eq: "Privacy Policy"}) {
+        contentfulLegalInformation(title: {eq: "Terms"}) {
             content {
                 json
             }
@@ -17,16 +17,16 @@ const privacyPolicyQuery = graphql`
     }
 `;
 
-const PrivacyPage = function ({language}) {
-    const {contentfulLegalInformation: privacyPolicyNode} = useStaticQuery(privacyPolicyQuery);
+const TermsPage = function ({language}) {
+    const {contentfulLegalInformation: termsNode} = useStaticQuery(termsQuery);
 
     return (
         <Layout>
-            <SEO title={i18n.t('Privacy policy | Teleport')} description={i18n.t('Privacy policy')} lang={language} />
+            <SEO title={i18n.t('Terms | Teleport')} description={i18n.t('Terms')} lang={language} />
             <div className={Styles.container}>
-                {documentToReactComponents(privacyPolicyNode.content.json)}
+                {documentToReactComponents(termsNode.content.json)}
             </div>
         </Layout>
     )
 };
-export default WithTranslations()(PrivacyPage);
+export default WithTranslations()(TermsPage);

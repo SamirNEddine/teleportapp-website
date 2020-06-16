@@ -30,7 +30,7 @@ const getDiff = function(local, hosted) {
 (async function() {
     try{
         //Get translations from locize
-        const currentTranslationRequestResponse = await axios.get(`https://api.locize.app/${LOCIZE_PROJECT_ID}/latest/en/en`);
+        const currentTranslationRequestResponse = await axios.get(`https://api.locize.app/${LOCIZE_PROJECT_ID}/latest/en/translations`);
         const {data: locizeTranslations} = currentTranslationRequestResponse;
         //Get local translations
         const localTranslations = require('../src/i18n/translationKeysReference.json');
@@ -38,13 +38,13 @@ const getDiff = function(local, hosted) {
         const {diffToAdd, diffToRemove} = getDiff(localTranslations, locizeTranslations);
         if(Object.keys(diffToAdd).length !== 0 && diffToAdd.constructor === Object) {
             console.log("Diff to add", diffToAdd);
-            await axios.post(`https://api.locize.app/missing/${LOCIZE_PROJECT_ID}/latest/en/en`, diffToAdd, {headers: {'Authorization': `Bearer ${LOCIZE_API_KEY}`}});
+            await axios.post(`https://api.locize.app/missing/${LOCIZE_PROJECT_ID}/latest/en/translations`, diffToAdd, {headers: {'Authorization': `Bearer ${LOCIZE_API_KEY}`}});
         }else {
             console.log("No diff to add!");
         }
         if(Object.keys(diffToRemove).length !== 0 && diffToRemove.constructor === Object) {
             console.log("Diff to remove", diffToRemove);
-            await axios.post(`https://api.locize.app/update/${LOCIZE_PROJECT_ID}/latest/en/en`, diffToRemove, {headers: {'Authorization': `Bearer ${LOCIZE_API_KEY}`}});
+            await axios.post(`https://api.locize.app/update/${LOCIZE_PROJECT_ID}/latest/en/translations`, diffToRemove, {headers: {'Authorization': `Bearer ${LOCIZE_API_KEY}`}});
         }else {
             console.log("No diff to remove!");
         }
@@ -55,7 +55,7 @@ const getDiff = function(local, hosted) {
         }
         await Promise.all( supportedLanguages.map(async (language) => {
             console.log(`Fetching ${language} translations`);
-            const translationsRequestResponse = await axios.get(`https://api.locize.app/${LOCIZE_PROJECT_ID}/latest/${language}/translation`);
+            const translationsRequestResponse = await axios.get(`https://api.locize.app/${LOCIZE_PROJECT_ID}/latest/${language}/translations`);
             const {data: translations} = translationsRequestResponse;
             let data = JSON.stringify(translations, null, 2);
             await writeFileAsync(__dirname + `/../src/translations/${language}.json`, data);
