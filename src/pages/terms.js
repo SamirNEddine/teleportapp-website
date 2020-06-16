@@ -29,4 +29,4 @@ const TermsPage = function ({language}) {
         </Layout>
     )
 };
-export default WithTranslations()(TermsPage);g
+export default WithTranslations()(TermsPage);
