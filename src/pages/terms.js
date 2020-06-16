@@ -4,6 +4,7 @@ import {graphql, useStaticQuery} from 'gatsby';
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Styles from './legal.module.css';
 import SEO from "../components/seo"
+import WithTranslations from '../components/i18n/withTranslations';
 import i18n from "../components/i18n/config";
 
 const termsQuery = graphql`
@@ -28,4 +29,4 @@ const TermsPage = function ({language}) {
         </Layout>
     )
 };
-export default TermsPage;
+export default WithTranslations()(TermsPage);g
