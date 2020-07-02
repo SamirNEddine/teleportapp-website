@@ -21,7 +21,11 @@ const statusImagesURLs = {
     '3x': 'https://storage.googleapis.com/teleport-main-website-assets/images/slack-3@3x.png',
 };
 
-const SlackPage = function ({language}) {
+const isMac = navigator.platform.toUpperCase().indexOf('MAC')>=0;
+const SlackPage = function ({language, history}) {
+    // if(!isMac){
+    //     window.location.replace(`/`)
+    // }
     return (
         <Layout>
             <SEO title={i18n.t('Slack Integration | Teleport')} description={i18n.t('Slack integration')} lang={language} />
@@ -43,6 +47,10 @@ const SlackPage = function ({language}) {
                     <img src={statusImagesURLs["1x"]} srcSet={statusImagesURLs["1x"] + ' 1x,' + statusImagesURLs["2x"] + ' 2x,' + statusImagesURLs["3x"] + ' 3x' } alt='Set status manually'/>
                 </li>
             </ul>
+            <div className={Styles.downloadContainer}>
+                <h1>{i18n.t('Slack - Download Teleport - Bottom')}</h1>
+                <a href='https://storage.googleapis.com/desktop-app-binaries-eu-west1/beta/Teleport.dmg'  download='Teleport'>{i18n.t('Slack - Download button')}</a>
+            </div>
         </Layout>
     )
 };
