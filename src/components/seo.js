@@ -109,7 +109,7 @@ function SEO({ description, lang, meta, title, image }) {
                 },
                 {
                     name: `twitter:description`,
-                    content: {titleTemplate},
+                    content: seo.description,
                 },
                 {
                     name: `twitter:image`,
