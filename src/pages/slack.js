@@ -24,7 +24,7 @@ const statusImagesURLs = {
 const SlackPage = function ({language}) {
     if(typeof navigator === 'object'){
         const isMac = navigator.platform.toUpperCase().indexOf('MAC')>=0;
-        if(isMac){
+        if(!isMac){
             window.location.replace(`/`)
         }
     }
