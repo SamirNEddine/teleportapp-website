@@ -45,7 +45,6 @@ function SEO({ description, lang, meta, title, image }) {
                 lang: seo.lang,
             }}
             title={seo.title}
-            titleTemplate={titleTemplate}
             meta={[
                 {
                     name: `og:site_name\t`,
