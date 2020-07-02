@@ -21,11 +21,14 @@ const statusImagesURLs = {
     '3x': 'https://storage.googleapis.com/teleport-main-website-assets/images/slack-3@3x.png',
 };
 
-const isMac = navigator.platform.toUpperCase().indexOf('MAC')>=0;
-const SlackPage = function ({language, history}) {
-    // if(!isMac){
-    //     window.location.replace(`/`)
-    // }
+const SlackPage = function ({language}) {
+    if(typeof navigator === 'object'){
+        const isMac = navigator.platform.toUpperCase().indexOf('MAC')>=0;
+        if(isMac){
+            window.location.replace(`/`)
+        }
+    }
+
     return (
         <Layout>
             <SEO title={i18n.t('Slack Integration | Teleport')} description={i18n.t('Slack integration')} lang={language} />
