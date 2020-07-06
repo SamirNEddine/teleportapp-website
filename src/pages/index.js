@@ -7,7 +7,6 @@ import Layout from "../components/layout";
 import Loader from 'react-loader-spinner'
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 import TopSectionStyles from './homepage-top-section.module.css';
-import ProductStyles from "./product.module.css";
 import TopSectionIllustration from '../assets/top-section-illustration.svg';
 import ProductSectionStyles from './homepage-product-section.module.css';
 import PurpleStart from '../assets/purple-star.svg';
@@ -17,6 +16,7 @@ import Number2 from '../assets/big-number-2.svg';
 import ProductIllustration2 from '../assets/product-illustration-2.svg';
 import Number3 from '../assets/big-number-3.svg';
 import ProductIllustration3 from '../assets/product-illustration-3.svg';
+import ProductStyles from "./product.module.css";
 
 const ProductPage = function ({language}) {
     const [formState, setFormState] = useState('initial');
