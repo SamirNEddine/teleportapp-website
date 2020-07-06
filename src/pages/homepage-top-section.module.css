@@ -110,9 +110,6 @@
     font-weight: normal;
     font-size: 12px;
     line-height: 16px;
-    display: flex;
-    align-items: center;
-    text-align: center;
     color: #FFFFFF
 }
 .container a {
@@ -213,6 +210,9 @@
         top: 8px;
         left: 0;
         border-radius: 3px;
+    }
+    .container form p {
+        max-width: 310px;
     }
     .waiting-list-loader {
         left: 39%;
