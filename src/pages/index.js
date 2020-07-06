@@ -7,6 +7,7 @@ import Layout from "../components/layout";
 import Loader from 'react-loader-spinner'
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 import TopSectionStyles from './homepage-top-section.module.css';
+import ProductStyles from "./product.module.css";
 import TopSectionIllustration from '../assets/top-section-illustration.svg';
 import ProductSectionStyles from './homepage-product-section.module.css';
 import PurpleStart from '../assets/purple-star.svg';
@@ -19,6 +20,7 @@ import ProductIllustration3 from '../assets/product-illustration-3.svg';
 
 const ProductPage = function ({language}) {
     const [formState, setFormState] = useState('initial');
+    const isMac = (typeof navigator === 'object' && navigator.platform.toUpperCase().indexOf('MAC')>=0);
 
     const onWaitingListFormSubmit = async (e) => {
         e.preventDefault();
@@ -46,11 +48,18 @@ const ProductPage = function ({language}) {
                         <li><h1>{i18n.t('Your remote working assistant')}</h1></li>
                         <li><h2>{i18n.t('Let your team know how and when is best to reach you in few clicks')}</h2></li>
                         <li>
-                            <form action="" onSubmit={onWaitingListFormSubmit}>
-                                <input type='email' name='email' placeholder={i18n.t('Your work email')} disabled={formState === 'loading'} onChange={ _ => {if(formState !== 'initial') setFormState('initial')}}/>
-                                <button disabled={formState !== 'initial'}> {formState === 'confirmed' ? i18n.t('Stay tuned!✨') : i18n.t('Get early access')}</button>
-                                {formState === 'loading' ? (<span className={TopSectionStyles.waitingListLoader}><Loader type="Puff" color="#00BFFF" height={30} width={30} /></span>) : ('')}
-                            </form>
+                            {isMac ?
+                                (
+                                    <a href='https://storage.googleapis.com/desktop-app-binaries-eu-west1/beta/Teleport.dmg'  download='Teleport'>{i18n.t('Product - Download button')}</a>
+                                ) : (
+                                    <form action="" onSubmit={onWaitingListFormSubmit}>
+                                        <p>{i18n.t('Available on OS X. Get notified when other platforms become available')}</p>
+                                        <input type='email' name='email' placeholder={i18n.t('Your work email')} disabled={formState === 'loading'} onChange={ _ => {if(formState !== 'initial') setFormState('initial')}}/>
+                                        <button disabled={formState !== 'initial'}> {formState === 'confirmed' ? i18n.t('Stay tuned!✨') : i18n.t('Get notified')}</button>
+                                        {formState === 'loading' ? (<span className={TopSectionStyles.waitingListLoader}><Loader type="Puff" color="#00BFFF" height={30} width={30} /></span>) : ('')}
+                                    </form>
+                                )
+                            }
                         </li>
                     </ul>
                 </div>
@@ -88,6 +97,16 @@ const ProductPage = function ({language}) {
                     </li>
                 </ul>
             </div>
+            {isMac ?
+                (
+                    <div className={ProductStyles.downloadContainer}>
+                        <h1>{i18n.t('Try Teleport for free!')}</h1>
+                        <a href='https://storage.googleapis.com/desktop-app-binaries-eu-west1/beta/Teleport.dmg'  download='Teleport'>{i18n.t('Product - Download button')}</a>
+                    </div>
+                ) : (
+                    <div/>
+                )
+            }
         </Layout>
     )
 };
