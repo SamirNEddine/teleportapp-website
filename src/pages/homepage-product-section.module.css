@@ -93,7 +93,45 @@
     line-height: 41px;
     color: #030163;
 }
-
+.download-container {
+    position: relative;
+    width: 100%;
+    height: 292px;
+    background: url("https://storage.googleapis.com/teleport-main-website-assets/images/stars-dark-blue-background.svg");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.download-container h1 {
+    position: relative;
+    top: 76px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 65px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.download-container a {
+    position: relative;
+    top: 100px;
+    padding: 14px 78px 14px 78px;
+    background: #E127EB;
+    border-radius: 3px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    cursor: pointer;
+}
 /* Media queries */
 @media screen and (max-width: 1150px) {
     .container ul li .feature-description h1 {
