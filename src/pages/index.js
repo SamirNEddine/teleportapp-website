@@ -97,16 +97,10 @@ const ProductPage = function ({language}) {
                     </li>
                 </ul>
             </div>
-            {isMac ?
-                (
-                    <div className={ProductStyles.bottomDownloadContainer}>
-                        <h1>{i18n.t('Try Teleport for free!')}</h1>
-                        <a href='https://storage.googleapis.com/desktop-app-binaries-eu-west1/beta/Teleport.dmg'  download='Teleport'>{i18n.t('Product - Download button')}</a>
-                    </div>
-                ) : (
-                    <div/>
-                )
-            }
+            <div className={isMac ? ProductStyles.bottomDownloadContainer : ProductStyles.bottomDownloadContainerHidden}>
+                <h1>{i18n.t('Try Teleport for free!')}</h1>
+                <a href='https://storage.googleapis.com/desktop-app-binaries-eu-west1/beta/Teleport.dmg'  download='Teleport'>{i18n.t('Product - Download button')}</a>
+            </div>
         </Layout>
     )
 };
