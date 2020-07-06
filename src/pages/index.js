@@ -16,7 +16,6 @@ import Number2 from '../assets/big-number-2.svg';
 import ProductIllustration2 from '../assets/product-illustration-2.svg';
 import Number3 from '../assets/big-number-3.svg';
 import ProductIllustration3 from '../assets/product-illustration-3.svg';
-import ProductStyles from "./product.module.css";
 
 const ProductPage = function ({language}) {
     const [formState, setFormState] = useState('initial');
@@ -99,7 +98,7 @@ const ProductPage = function ({language}) {
             </div>
             {isMac ?
                 (
-                    <div className={ProductStyles.downloadContainer}>
+                    <div className={ProductSectionStyles.downloadContainer}>
                         <h1>{i18n.t('Try Teleport for free!')}</h1>
                         <a href='https://storage.googleapis.com/desktop-app-binaries-eu-west1/beta/Teleport.dmg'  download='Teleport'>{i18n.t('Product - Download button')}</a>
                     </div>
