@@ -104,6 +104,33 @@
 .container form button:focus {
     outline-width: 0;
 }
+.container form p {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF
+}
+.container a {
+    position: relative;
+    top: 3px;
+    padding: 14px 38px 14px 38px;
+    background: #6100C6;
+    border-radius: 3px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    cursor: pointer;
+}
 .waiting-list-loader {
     position: absolute;
     width: 30px;
@@ -190,5 +217,8 @@
     .waiting-list-loader {
         left: 39%;
         top: -32px;
+    }
+    .container a {
+        top: 50px;
     }
 }
