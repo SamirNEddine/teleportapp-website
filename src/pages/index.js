@@ -97,10 +97,24 @@ const ProductPage = function ({language}) {
                     </li>
                 </ul>
             </div>
-            <div className={isMac ? ProductStyles.bottomDownloadContainer : ProductStyles.bottomDownloadContainerHidden}>
-                <h1>{i18n.t('Try Teleport for free!')}</h1>
-                <a href='https://storage.googleapis.com/desktop-app-binaries-eu-west1/beta/Teleport.dmg'  download='Teleport'>{i18n.t('Product - Download button')}</a>
-            </div>
+                <div className={ProductStyles.bottomDownloadContainer}>
+                    {isMac ?
+                        (
+                            <div>
+                                <h1>{i18n.t('Try Teleport for free!')}</h1>
+                                <a href='https://storage.googleapis.com/desktop-app-binaries-eu-west1/beta/Teleport.dmg'  download='Teleport'>{i18n.t('Product - Download button')}</a>
+                            </div>
+                        ) : (
+                            <form action="" onSubmit={onWaitingListFormSubmit}>
+                                <p>{i18n.t('Available on OS X. Get notified when other platforms become available')}</p>
+                                <input type='email' name='email' placeholder={i18n.t('Your work email')} disabled={formState === 'loading'} onChange={ _ => {if(formState !== 'initial') setFormState('initial')}}/>
+                                <button disabled={formState !== 'initial'}> {formState === 'confirmed' ? i18n.t('Stay tuned!✨') : i18n.t('Get notified')}</button>
+                                {formState === 'loading' ? (<span className={ProductStyles.waitingListLoader}><Loader type="Puff" color="#00BFFF" height={30} width={30} /></span>) : ('')}
+                            </form>
+                        )
+                    }
+                </div>
+            }
         </Layout>
     )
 };
