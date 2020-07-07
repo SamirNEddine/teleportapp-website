@@ -220,5 +220,10 @@
     }
     .container a {
         top: 50px;
+        padding: 14px 38px 14px 38px;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.1em;
+        cursor: pointer;
     }
 }
