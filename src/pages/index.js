@@ -114,7 +114,6 @@ const ProductPage = function ({language}) {
                         )
                     }
                 </div>
-            }
         </Layout>
     )
 };

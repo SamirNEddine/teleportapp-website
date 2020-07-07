@@ -43,7 +43,7 @@
 }
 .bottom-download-container form {
     position: relative;
-    top: 92px
+    top: 92px;
 }
 .bottom-download-container form input {
     position: relative;
@@ -107,7 +107,9 @@
     font-weight: normal;
     font-size: 12px;
     line-height: 16px;
-    color: #FFFFFF
+    color: #FFFFFF;
+    width: 100%;
+    text-align: center;
 }
 
 .bottom-download-container .waiting-list-loader {
@@ -116,4 +118,40 @@
     top: 54px;
     margin: 0;
     padding: 0;
+}
+
+@media screen and (max-width: 540px) {
+    .bottom-download-container form {
+        width: 100%;
+        top: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+    }
+    .bottom-download-container form input {
+        width: 88%;
+    }
+    .bottom-download-container form button {
+        display: block;
+        width: 88%;
+        top: 8px;
+        left: 0;
+        border-radius: 3px;
+    }
+    .bottom-download-container .waiting-list-loader {
+        left: 46%;
+        top: -32px;
+    }
+    .bottom-download-container  h1 {
+        font-size: 32px;
+        line-height: 52px;
+    }
+    .bottom-download-container a {
+        padding: 14px 38px 14px 38px;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.1em;
+        cursor: pointer;
+    }
 }
