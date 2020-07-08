@@ -50,7 +50,7 @@ const ProductPage = function ({language}) {
                         <li>
                             {isMac ?
                                 (
-                                    <a href='https://storage.googleapis.com/desktop-app-binaries-eu-west1/beta/Teleport.dmg'  download='Teleport'>{i18n.t('Product - Download button')}</a>
+                                    <a className={TopSectionStyles.downloadButton} href='https://storage.googleapis.com/desktop-app-binaries-eu-west1/beta/Teleport.dmg'  download='Teleport'>{i18n.t('Product - Download button')}</a>
                                 ) : (
                                     <form action="" onSubmit={onWaitingListFormSubmit}>
                                         <p>{i18n.t('Available on OS X. Get notified when other platforms become available')}</p>
@@ -60,6 +60,9 @@ const ProductPage = function ({language}) {
                                     </form>
                                 )
                             }
+                        </li>
+                        <li>
+                            <a className={isMac ? TopSectionStyles.productHunt : TopSectionStyles.productHuntAlternate} href="https://www.producthunt.com/posts/teleport-fa7a78e0-9d2e-40b0-8bd0-c356d4a58567?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-teleport-fa7a78e0-9d2e-40b0-8bd0-c356d4a58567" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=213697&theme=dark" alt="Teleport - Let your remote team know when is best to reach you. | Product Hunt Embed" style={{width:'250px', height:'54px'}} width="250px" height="54px" /></a>
                         </li>
                     </ul>
                 </div>
