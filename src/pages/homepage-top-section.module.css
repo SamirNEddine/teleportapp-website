@@ -112,7 +112,7 @@
     line-height: 16px;
     color: #FFFFFF
 }
-.container a {
+.download-button {
     position: relative;
     top: 3px;
     padding: 14px 38px 14px 38px;
@@ -148,7 +148,16 @@
     left: 28px;
     top: 87px;
 }
-
+.product-hunt {
+    position: relative;
+    top: -34px;
+    left: -28px;
+}
+.product-hunt-alternate {
+    position: relative;
+    top: -44px;
+    left: -28px;
+}
 /* Media queries */
 @media screen and (max-width: 1200px) {
     .container .left {
@@ -218,12 +227,18 @@
         left: 39%;
         top: -32px;
     }
-    .container a {
+    .download-button {
         top: 50px;
         padding: 14px 38px 14px 38px;
         font-size: 18px;
         line-height: 28px;
         letter-spacing: 0.1em;
         cursor: pointer;
+    }
+    .product-hunt {
+        top: -10px;
+    }
+    .product-hunt-alternate {
+        top: -32px;
     }
 }
